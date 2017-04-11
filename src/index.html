@@ -2,26 +2,32 @@
 <html>
 	<head>
 		<title>TeiRD</title>
-		<link rel="stylesheet" href="styles/default.css"/>
+		<link rel="stylesheet" type="text/css" href="styles/default.css"/>
 	</head>
 
 	<body>
 		<h1>TeiRD</h1>
-		<form onsubmit="render()">
-		  Source: <input type="text" name="source" id="ed_source" value="www.google.com"/><br>
-		  <input type="submit" value="Submit"/>
-		</form>
+		<div class="form">
+			<form action="javascript:render()">
+			  Source: <input type="text" name="source" id="ed_source" value="http://cts.informatik.uni-leipzig.de/textgrid/cts/?request=GetPassage&urn=urn:cts:tg:IbsenHenrik.BrandEindramatischesGedicht:1-5&configuration=divs=true_escapepassage=false"/><br>
+			  <input type="submit" value="Submit"/>
+			</form>
+		</div>
 		<p id="text"/>
-		
+
 		<script>
 			render = function() {
 				var url = document.getElementById("ed_source").value;
-				var xmlHttp = new XMLHttpRequest();
-				xmlHttp.open("GET", url, false);
-				xmlHttp.send(null);
-				var resp = xmlHttp.responseText;
-				document.getElementById("text").innerHTML = resp;
-				//alert(resp);
+
+				loadXML(url, function(resp) {
+					document.getElementById("text").innerHTML = resp;
+					alert(resp);
+				});
+			};
+
+			loadXML = function(url, callback) {
+				//TODO getXML
+				callback("test");
 			};
 		</script>
 	</body>
