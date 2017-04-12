@@ -3,6 +3,7 @@
 	<head>
 		<title>TeiRD</title>
 		<link rel="stylesheet" type="text/css" href="styles/default.css"/>
+		<script type="text/javascript" src="lib/transform.js"></script>
 	</head>
 
 	<body>
@@ -14,31 +15,6 @@
 			</form>
 		</div>
 		<div id="text"/>
-
-		<script>
-			function render() {
-				var url = document.getElementById("ed_source").value;
-				loadXML(url, translateXML);
-			};
-
-			function loadXML(url, callback) {
-				var xhr = new XMLHttpRequest();
-				xhr.open("GET", "res/example.xml", false);
-				xhr.send();
-				var resp = getXmlString(xhr);
-
-				callback(resp);
-			};
-
-			function getXmlString(xhr) {
-				if (window.ActiveXObject) { return xml.xml; }
-				return new XMLSerializer().serializeToString(xhr.responseXML);
-			}
-
-			function translateXML(resp) {
-				var xmlTextNode = document.createTextNode(resp);
-				document.getElementById("text").appendChild(xmlTextNode);
-			};
-		</script>
 	</body>
+
 </html>
