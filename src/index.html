@@ -9,25 +9,35 @@
 		<h1>TeiRD</h1>
 		<div class="form">
 			<form action="javascript:render()">
-			  Source: <input type="text" name="source" id="ed_source" value="http://cts.informatik.uni-leipzig.de/textgrid/cts/?request=GetPassage&urn=urn:cts:tg:IbsenHenrik.BrandEindramatischesGedicht:1-5&configuration=divs=true_escapepassage=false"/><br>
+			  Source: <input type="text" name="source" id="ed_source" value=""/><br>
 			  <input type="submit" value="Submit"/>
 			</form>
 		</div>
-		<p id="text"/>
+		<div id="text"/>
 
 		<script>
-			render = function() {
+			function render() {
 				var url = document.getElementById("ed_source").value;
-
-				loadXML(url, function(resp) {
-					document.getElementById("text").innerHTML = resp;
-					alert(resp);
-				});
+				loadXML(url, translateXML);
 			};
 
-			loadXML = function(url, callback) {
-				//TODO getXML
-				callback("test");
+			function loadXML(url, callback) {
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", "res/example.xml", false);
+				xhr.send();
+				var resp = getXmlString(xhr);
+
+				callback(resp);
+			};
+
+			function getXmlString(xhr) {
+				if (window.ActiveXObject) { return xml.xml; }
+				return new XMLSerializer().serializeToString(xhr.responseXML);
+			}
+
+			function translateXML(resp) {
+				var xmlTextNode = document.createTextNode(resp);
+				document.getElementById("text").appendChild(xmlTextNode);
 			};
 		</script>
 	</body>
