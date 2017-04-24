@@ -1,22 +1,18 @@
 function render() {
   var url = document.getElementById("ed_source").value;
-  loadXML(url, transformXML);
+
+  xml = loadXML("res/example.xml");
+  xsl = loadXML("res/example.xsl");
+
+  xsltProcessor = new XSLTProcessor();
+  xsltProcessor.importStylesheet(xsl);
+  result = xsltProcessor.transformToFragment(xml, document);
+  document.getElementById("text").appendChild(result);
 };
 
-function loadXML(url, callback) {
+function loadXML(url) {
   var xhr = new XMLHttpRequest();
-  xhr.open("GET", "res/example.xml", false);
+  xhr.open("GET", url, false);
   xhr.send();
-  var resp = getXmlString(xhr);
-
-  callback(resp);
-};
-
-function getXmlString(xhr) {
-  return new XMLSerializer().serializeToString(xhr.responseXML);
-}
-
-function transformXML(resp) {
-  var xmlTextNode = document.createTextNode(resp);
-  document.getElementById("text").appendChild(xmlTextNode);
+  return xhr.responseXML;
 };
