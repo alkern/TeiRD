@@ -1,0 +1,23 @@
+GetPassage
+  request
+  reply
+    passage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bis div6 in example_long
+div=true als Parameter
