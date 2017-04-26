@@ -37,6 +37,12 @@
       <h2>passage</h2>
       <xsl:for-each select="s:div1">
         <h3>div1</h3>
+        <xsl:for-each select="s:div2">
+          <h4>Chapter</h4>
+          <xsl:for-each select="s:div3">
+            <xsl:value-of select="."/>
+          </xsl:for-each>
+        </xsl:for-each>
       </xsl:for-each>
     </xsl:for-each>
   </xsl:template>
