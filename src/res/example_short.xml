@@ -1,43 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="example_short.xsl"?>
-<cts:GetPassage xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns:s="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
-  <!--cts:request>
+<cts:GetPassage xmlns:cts="http://chs.harvard.edu/xmlns/cts"
+                xmlns="http://relaxng.org/ns/structure/1.0"
+                xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+                xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <cts:request>
     <cts:requestName>GetPassage</cts:requestName>
     <cts:requestUrn>urn:cts:pbc:bible.parallel.eng.kingjames:1.3</cts:requestUrn>
-  </cts:request-->
+  </cts:request>
   <cts:reply>
     <!--cts:urn>urn:cts:pbc:bible.parallel.eng.kingjames:1.3</cts:urn-->
     <cts:passage>
-      <s:div1>
-        <s:div2 n="3" type="chapter">
-          <s:div3 n="1" type="sentence" xml:lang="eng">Now the serpent was more subtil than any beast of the field which the LORD God had made . And he said unto the woman , Yea , hath God said , Ye shall not eat of every tree of the garden ?</s:div3>
-          <s:div3 n="2" type="sentence" xml:lang="eng">And the woman said unto the serpent , We may eat of the fruit of the trees of the garden :</s:div3>
-          <s:div3 n="3" type="sentence" xml:lang="eng">But of the fruit of the tree which is in the midst of the garden , God hath said , Ye shall not eat of it , neither shall ye touch it , lest ye die .</s:div3>
-          <s:div3 n="4" type="sentence" xml:lang="eng">And the serpent said unto the woman , Ye shall not surely die :</s:div3>
-          <s:div3 n="5" type="sentence" xml:lang="eng">For God doth know that in the day ye eat thereof , then your eyes shall be opened , and ye shall be as gods , knowing good and evil .</s:div3>
-          <s:div3 n="6" type="sentence" xml:lang="eng">And when the woman saw that the tree was good for food , and that it was pleasant to the eyes , and a tree to be desired to make one wise , she took of the fruit thereof , and did eat , and gave also unto her husband with her ; and he did eat .</s:div3>
-          <s:div3 n="7" type="sentence" xml:lang="eng">And the eyes of them both were opened , and they knew that they were naked ; and they sewed fig leaves together , and made themselves aprons .</s:div3>
-          <s:div3 n="8" type="sentence" xml:lang="eng">And they heard the voice of the LORD God walking in the garden in the cool of the day : and Adam and his wife hid themselves from the presence of the LORD God amongst the trees of the garden .</s:div3>
-          <s:div3 n="9" type="sentence" xml:lang="eng">And the LORD God called unto Adam , and said unto him , Where art thou ?</s:div3>
-          <s:div3 n="10" type="sentence" xml:lang="eng">And he said , I heard thy voice in the garden , and I was afraid , because I was naked ; and I hid myself .</s:div3>
-          <s:div3 n="11" type="sentence" xml:lang="eng">And he said , Who told thee that thou wast naked ? Hast thou eaten of the tree , whereof I commanded thee that thou shouldest not eat ?</s:div3>
-          <s:div3 n="12" type="sentence" xml:lang="eng">And the man said , The woman whom thou gavest to be with me , she gave me of the tree , and I did eat .</s:div3>
-          <s:div3 n="13" type="sentence" xml:lang="eng">And the LORD God said unto the woman , What is this that thou hast done ? And the woman said , The serpent beguiled me , and I did eat .</s:div3>
-          <s:div3 n="14" type="sentence" xml:lang="eng">And the LORD God said unto the serpent , Because thou hast done this , thou art cursed above all cattle , and above every beast of the field ; upon thy belly shalt thou go , and dust shalt thou eat all the days of thy life :</s:div3>
-          <s:div3 n="15" type="sentence" xml:lang="eng">And I will put enmity between thee and the woman , and between thy seed and her seed ; it shall bruise thy head , and thou shalt bruise his heel .</s:div3>
-          <s:div3 n="16" type="sentence" xml:lang="eng">Unto the woman he said , I will greatly multiply thy sorrow and thy conception ; in sorrow thou shalt bring forth children ; and thy desire shall be to thy husband , and he shall rule over thee .</s:div3>
-          <s:div3 n="17" type="sentence" xml:lang="eng">And unto Adam he said , Because thou hast hearkened unto the voice of thy wife , and hast eaten of the tree , of which I commanded thee , saying , Thou shalt not eat of it : cursed is the ground for thy sake ; in sorrow shalt thou eat of it all the days of thy life ;</s:div3>
-          <s:div3 n="18" type="sentence" xml:lang="eng">Thorns also and thistles shall it bring forth to thee ; and thou shalt eat the herb of the field ;</s:div3>
-          <s:div3 n="19" type="sentence" xml:lang="eng">In the sweat of thy face shalt thou eat bread , till thou return unto the ground ; for out of it wast thou taken : for dust thou art , and unto dust shalt thou return .</s:div3>
-          <s:div3 n="20" type="sentence" xml:lang="eng">And Adam called his wife's name Eve ; because she was the mother of all living .</s:div3>
-          <s:div3 n="21" type="sentence" xml:lang="eng">Unto Adam also and to his wife did the LORD God make coats of skins , and clothed them .</s:div3>
-          <s:div3 n="22" type="sentence" xml:lang="eng">And the LORD God said , Behold , the man is become as one of us , to know good and evil : and now , lest he put forth his hand , and take also of the tree of life , and eat , and live for ever :</s:div3>
-          <s:div3 n="23" type="sentence" xml:lang="eng">Therefore the LORD God sent him forth from the garden of Eden , to till the ground from whence he was taken .</s:div3>
-          <s:div3 n="24" type="sentence" xml:lang="eng">So he drove out the man ; and he placed at the east of the garden of Eden Cherubims , and a flaming sword which turned every way , to keep the way of the tree of life .</s:div3>
-        </s:div2>
-      </s:div1>
+      <div1>
+        <div2 n="3" type="chapter">
+          <div3 n="1" type="sentence" xml:lang="eng">Now the serpent was more subtil than any beast of the field which the LORD God had made . And he said unto the woman , Yea , hath God said , Ye shall not eat of every tree of the garden ?</div3>
+          <div3 n="2" type="sentence" xml:lang="eng">And the woman said unto the serpent , We may eat of the fruit of the trees of the garden :</div3>
+          <div3 n="3" type="sentence" xml:lang="eng">But of the fruit of the tree which is in the midst of the garden , God hath said , Ye shall not eat of it , neither shall ye touch it , lest ye die .</div3>
+          <div3 n="4" type="sentence" xml:lang="eng">And the serpent said unto the woman , Ye shall not surely die :</div3>
+          <div3 n="5" type="sentence" xml:lang="eng">For God doth know that in the day ye eat thereof , then your eyes shall be opened , and ye shall be as gods , knowing good and evil .</div3>
+          <div3 n="6" type="sentence" xml:lang="eng">And when the woman saw that the tree was good for food , and that it was pleasant to the eyes , and a tree to be desired to make one wise , she took of the fruit thereof , and did eat , and gave also unto her husband with her ; and he did eat .</div3>
+          <div3 n="7" type="sentence" xml:lang="eng">And the eyes of them both were opened , and they knew that they were naked ; and they sewed fig leaves together , and made themselves aprons .</div3>
+          <div3 n="8" type="sentence" xml:lang="eng">And they heard the voice of the LORD God walking in the garden in the cool of the day : and Adam and his wife hid themselves from the presence of the LORD God amongst the trees of the garden .</div3>
+          <div3 n="9" type="sentence" xml:lang="eng">And the LORD God called unto Adam , and said unto him , Where art thou ?</div3>
+          <div3 n="10" type="sentence" xml:lang="eng">And he said , I heard thy voice in the garden , and I was afraid , because I was naked ; and I hid myself .</div3>
+          <div3 n="11" type="sentence" xml:lang="eng">And he said , Who told thee that thou wast naked ? Hast thou eaten of the tree , whereof I commanded thee that thou shouldest not eat ?</div3>
+          <div3 n="12" type="sentence" xml:lang="eng">And the man said , The woman whom thou gavest to be with me , she gave me of the tree , and I did eat .</div3>
+          <div3 n="13" type="sentence" xml:lang="eng">And the LORD God said unto the woman , What is this that thou hast done ? And the woman said , The serpent beguiled me , and I did eat .</div3>
+          <div3 n="14" type="sentence" xml:lang="eng">And the LORD God said unto the serpent , Because thou hast done this , thou art cursed above all cattle , and above every beast of the field ; upon thy belly shalt thou go , and dust shalt thou eat all the days of thy life :</div3>
+          <div3 n="15" type="sentence" xml:lang="eng">And I will put enmity between thee and the woman , and between thy seed and her seed ; it shall bruise thy head , and thou shalt bruise his heel .</div3>
+          <div3 n="16" type="sentence" xml:lang="eng">Unto the woman he said , I will greatly multiply thy sorrow and thy conception ; in sorrow thou shalt bring forth children ; and thy desire shall be to thy husband , and he shall rule over thee .</div3>
+          <div3 n="17" type="sentence" xml:lang="eng">And unto Adam he said , Because thou hast hearkened unto the voice of thy wife , and hast eaten of the tree , of which I commanded thee , saying , Thou shalt not eat of it : cursed is the ground for thy sake ; in sorrow shalt thou eat of it all the days of thy life ;</div3>
+          <div3 n="18" type="sentence" xml:lang="eng">Thorns also and thistles shall it bring forth to thee ; and thou shalt eat the herb of the field ;</div3>
+          <div3 n="19" type="sentence" xml:lang="eng">In the sweat of thy face shalt thou eat bread , till thou return unto the ground ; for out of it wast thou taken : for dust thou art , and unto dust shalt thou return .</div3>
+          <div3 n="20" type="sentence" xml:lang="eng">And Adam called his wife's name Eve ; because she was the mother of all living .</div3>
+          <div3 n="21" type="sentence" xml:lang="eng">Unto Adam also and to his wife did the LORD God make coats of skins , and clothed them .</div3>
+          <div3 n="22" type="sentence" xml:lang="eng">And the LORD God said , Behold , the man is become as one of us , to know good and evil : and now , lest he put forth his hand , and take also of the tree of life , and eat , and live for ever :</div3>
+          <div3 n="23" type="sentence" xml:lang="eng">Therefore the LORD God sent him forth from the garden of Eden , to till the ground from whence he was taken .</div3>
+          <div3 n="24" type="sentence" xml:lang="eng">So he drove out the man ; and he placed at the east of the garden of Eden Cherubims , and a flaming sword which turned every way , to keep the way of the tree of life .</div3>
+        </div2>
+      </div1>
     </cts:passage>
-    <!--license>Public Domain</license>
-    <source>http://unbound.biola.edu/index.cfm?method=downloads.showDownloadMain retrieved via Canonical Text Service http://cts.informatik.uni-leipzig.de/pbc/cts/ with CTS URN urn:cts:pbc:bible.parallel.eng.kingjames:1.3</source-->
+    <license>Public Domain</license>
+    <source>http://unbound.biola.edu/index.cfm?method=downloads.showDownloadMain retrieved via Canonical Text Service http://cts.informatik.uni-leipzig.de/pbc/cts/ with CTS URN urn:cts:pbc:bible.parallel.eng.kingjames:1.3</source>
   </cts:reply>
 </cts:GetPassage>
