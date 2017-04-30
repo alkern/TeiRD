@@ -16,8 +16,14 @@ function render(xml, xsl) {
   //var url = document.getElementById("ed_source").value;
   xsltProcessor = new XSLTProcessor();
   xsltProcessor.importStylesheet(xsl);
-  result = xsltProcessor.transformToFragment(xml, document);
-  document.getElementById("text").appendChild(result);
+  result = xsltProcessor.transformToDocument(xml, document);
+  //document.getElementById("text").appendChild(result);
+  var serializer = new XMLSerializer();
+  var transformed = serializer.serializeToString(result.documentElement);
+  var newwindow = window.open();
+  newwindow.document.open();
+  newwindow.document.write(transformed);
+  newwindow.document.close();
 };
 
 function loadXML(url) {

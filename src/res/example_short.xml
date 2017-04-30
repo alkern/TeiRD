@@ -9,7 +9,7 @@
     <cts:requestUrn>urn:cts:pbc:bible.parallel.eng.kingjames:1.3</cts:requestUrn>
   </cts:request>
   <cts:reply>
-    <!--cts:urn>urn:cts:pbc:bible.parallel.eng.kingjames:1.3</cts:urn-->
+    <cts:urn>urn:cts:pbc:bible.parallel.eng.kingjames:1.3</cts:urn>
     <cts:passage>
       <div1>
         <div2 n="3" type="chapter">

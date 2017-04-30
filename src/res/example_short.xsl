@@ -11,7 +11,7 @@
   <xsl:template match="/">
     <html>
       <head>
-        <h1>Short Example</h1>
+        <title>Short Example</title>
         <link rel="stylesheet" type="text/css" href="styles/default.css"/>
       </head>
       <body>
@@ -24,10 +24,11 @@
     <xsl:for-each select="cts:passage/s:div1/s:div2">
       <h2>Chapter</h2>
       <xsl:for-each select="s:div3">
-        <xsl:value-of select="."/><br/>
+        <div><xsl:value-of select="."/></div>
       </xsl:for-each>
     </xsl:for-each>
   </xsl:template>
+
   <xsl:template match="cts:request"/>
 
 </xsl:stylesheet>
