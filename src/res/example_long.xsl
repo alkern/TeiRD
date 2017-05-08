@@ -31,28 +31,48 @@
 
   <!-- Akte -->
   <xsl:template match="s:div3[@type='h4']">
-    <h1><xsl:value-of select="string(./s:div4)"/></h1>
-    <xsl:for-each select=".//s:div5">
-      <xsl:value-of select="."/>
-    </xsl:for-each>
-  </xsl:template>
-
-  <!-- Akte -->
-  <xsl:template match="s:div3[@type='h4']">
     <xsl:for-each select=".//s:div4">
       <xsl:choose>
         <xsl:when test="@type[.='h4']">
           <h1><xsl:value-of select="."/></h1>
         </xsl:when>
         <xsl:when test="@type[.='stage']">
-          <em><xsl:value-of select="."/></em>
+          <div><em><xsl:value-of select="."/></em></div>
         </xsl:when>
         <xsl:when test="@type[.='sp']">
-          <xsl:value-of select="."/>
+          <xsl:for-each select=".//s:div5">
+            <xsl:call-template name="speech">
+              <xsl:with-param name="div">
+                <xsl:value-of select="."/>
+              </xsl:with-param>
+            </xsl:call-template>
+          </xsl:for-each>
         </xsl:when>
         <xsl:otherwise/>
       </xsl:choose>
     </xsl:for-each>
+  </xsl:template>
+
+  <!-- Einzelne Textabschnitte -->
+  <xsl:template name="speech">
+    <xsl:param name="div"/>
+    <xsl:choose>
+      <xsl:when test="@type[.='speaker']">
+        <b><xsl:value-of select="."/></b>
+      </xsl:when>
+      <xsl:when test="@type[.='stage']">
+        <div><em><xsl:value-of select="."/></em></div>
+      </xsl:when>
+      <xsl:when test="@type[.='l']">
+        <div><xsl:value-of select="."/></div>
+      </xsl:when>
+      <xsl:when test="@type[.='lg']">
+        <xsl:for-each select=".//s:div6">
+          <div><xsl:value-of select="."/></div>
+        </xsl:for-each>
+      </xsl:when>
+      <xsl:otherwise/>
+    </xsl:choose>
   </xsl:template>
 
   <!-- ignorierte Tags -->
