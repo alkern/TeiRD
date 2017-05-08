@@ -19,6 +19,7 @@
     </html>
   </xsl:template>
 
+  <!-- Personenverzeichnis -->
   <xsl:template match="s:div3[@type='Dramatis_Personae']">
     <h1><xsl:value-of select="string(./s:div4)"/></h1>
     <ul>
@@ -28,6 +29,33 @@
     </ul>
   </xsl:template>
 
+  <!-- Akte -->
+  <xsl:template match="s:div3[@type='h4']">
+    <h1><xsl:value-of select="string(./s:div4)"/></h1>
+    <xsl:for-each select=".//s:div5">
+      <xsl:value-of select="."/>
+    </xsl:for-each>
+  </xsl:template>
+
+  <!-- Akte -->
+  <xsl:template match="s:div3[@type='h4']">
+    <xsl:for-each select=".//s:div4">
+      <xsl:choose>
+        <xsl:when test="@type[.='h4']">
+          <h1><xsl:value-of select="."/></h1>
+        </xsl:when>
+        <xsl:when test="@type[.='stage']">
+          <em><xsl:value-of select="."/></em>
+        </xsl:when>
+        <xsl:when test="@type[.='sp']">
+          <xsl:value-of select="."/>
+        </xsl:when>
+        <xsl:otherwise/>
+      </xsl:choose>
+    </xsl:for-each>
+  </xsl:template>
+
+  <!-- ignorierte Tags -->
   <xsl:template match="tei:title"/>
 
 </xsl:stylesheet>

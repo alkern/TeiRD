@@ -31,3 +31,7 @@ genutzt werden.
     * Alternative: Transformation per PHP serverseitig (Performanz besser?)
 * XSLT erkennt unbenannten XMLNS nicht
     * diesen Namespace doppelt in XSL angeben, einmal mit Name
+
+# Sonstiges
+
+* xsl:choose benötigt xsl:otherwise
