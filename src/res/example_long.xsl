@@ -33,13 +33,17 @@
   <xsl:template match="s:div3[@type='h4']">
     <xsl:for-each select=".//s:div4">
       <xsl:choose>
+        <!-- Titel -->
         <xsl:when test="@type[.='h4']">
           <h1><xsl:value-of select="."/></h1>
         </xsl:when>
+        <!-- Beschreibung des Aktes -->
         <xsl:when test="@type[.='stage']">
           <div><em><xsl:value-of select="."/></em></div>
         </xsl:when>
+        <!-- restlicher Text -->
         <xsl:when test="@type[.='sp']">
+          <br/>
           <xsl:for-each select=".//s:div5">
             <xsl:call-template name="speech">
               <xsl:with-param name="div">
