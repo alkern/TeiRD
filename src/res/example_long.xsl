@@ -81,5 +81,10 @@
 
   <!-- ignorierte Tags -->
   <xsl:template match="tei:title"/>
+  <xsl:template match="s:requestName"/>
+  <xsl:template match="s:requestUrn"/>
+  <xsl:template match="s:urn"/>
+  <xsl:template match="s:license"/>
+  <xsl:template match="s:source"/>
 
 </xsl:stylesheet>
