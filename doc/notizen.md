@@ -35,3 +35,5 @@ genutzt werden.
 # Sonstiges
 
 * xsl:choose benötigt xsl:otherwise
+* for $t in doc('')//.[@n = "1"] return $t == suche in allen Tags nach Attributwert unabhängig von Elementtyp
+* <xsl:for-each select="./descendant::node()"> alle Kinder
