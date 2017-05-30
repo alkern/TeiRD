@@ -7,32 +7,44 @@
   xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
   xmlns:tei="http://www.tei-c.org/ns/1.0">
 
+  <xsl:output method="html" indent="yes" omit-xml-declaration="yes"/>
+
+  <!-- Identity template -->
+  <xsl:template match="@* | node()">
+    <xsl:copy>
+      <xsl:apply-templates select="@* | node()"/>
+    </xsl:copy>
+  </xsl:template>
+
   <xsl:template match="/">
     <html>
-      <head>
-        <link rel="stylesheet" type="text/css" href="../styles/default.css"/>
-      </head>
       <body>
-        <xsl:apply-templates/>
+        <xsl:apply-templates select="@* | node()" />
       </body>
     </html>
   </xsl:template>
 
-  <xsl:template match="s:div1">
-    <xsl:for-each select="./descendant::node()">
-      <xsl:choose>
-        <!--  -->
-        <xsl:when test="@type[.='chapter']">
-          <div><xsl:value-of select="."/></div><br/>
-        </xsl:when>
+  <xsl:template match="tei:head">
+    <b>
+      <xsl:apply-templates select="@* |node()" />
+    </b>
+  </xsl:template>
 
-        <xsl:when test="@type[.='section']">
-          <p><xsl:value-of select="."/></p><br/>
-        </xsl:when>
+  <xsl:template match="tei:p">
+    <div>
+      <xsl:apply-templates select="@* |node()" />
+    </div>
+  </xsl:template>
 
-        <xsl:otherwise/>
-      </xsl:choose>
-    </xsl:for-each>
+  <xsl:template match="tei:hi">
+    <i>
+      <xsl:apply-templates select="@* |node()" />
+    </i>
+  </xsl:template>
+
+  <xsl:template match="s:div3">
+    <xsl:apply-templates select="@* |node()" />
+    <br/>
   </xsl:template>
 
   <!-- ignorierte Tags -->
