@@ -18,6 +18,9 @@
 
   <xsl:template match="/">
     <html>
+      <head>
+        <link href="styles/default.css" rel="stylesheet" type="text/css"/>
+      </head>
       <body>
         <xsl:apply-templates select="@* | node()" />
       </body>
