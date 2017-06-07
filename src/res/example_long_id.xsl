@@ -13,7 +13,7 @@
     <xsl:template match="/">
     <html>
       <head>
-        <link rel="stylesheet" type="text/css" href="../styles/default.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/default.css"/>
       </head>
       <body>
         <xsl:apply-templates/>
@@ -49,9 +49,8 @@
 
     <!-- Text -->
     <xsl:template match="s:div4[@type = 'stage']">
-        <div class="stage">
-            <xsl:apply-templates select="@* |node()" />
-        </div>
+        <xsl:apply-templates select="@* |node()" />
+        <br/>
     </xsl:template>
 
     <xsl:template match="tei:hi[@rend = 'italic']">
@@ -73,8 +72,15 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="s:div5[@type = 'speaker']">
+    <xsl:template match="s:div5[@type = 'stage']">
         <xsl:apply-templates select="@* |node()" />
+        <br/>
+    </xsl:template>
+
+    <xsl:template match="s:div5[@type = 'speaker']">
+        <b>
+			<xsl:apply-templates select="@* |node()" />
+		</b>
         <br/>
     </xsl:template>
 

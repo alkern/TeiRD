@@ -1,0 +1,544 @@
+<?xml-stylesheet type="text/xsl" href="template.xsl"?>
+<GetPassage xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <request>
+        <requestName>GetPassage</requestName>
+        <requestUrn>urn:cts:ted:1.de:</requestUrn>
+    </request>
+    <reply>
+        <urn>urn:cts:ted:1.de:</urn>
+        <passage>
+            <div1 n="1" type="paragraf">
+                <div2 n="1" type="line">Vielen Dank, Chris. Es ist mir wirklich eine Ehre,</div2>
+                <div2 n="2" type="line">
+                    zweimal auf dieser Bühne stehen zu dürfen. Tausend Dank dafür.
+                </div2>
+                <div2 n="3" type="line">
+                    Ich bin wirklich begeistert von dieser Konferenz, und ich danke Ihnen allen
+                </div2>
+                <div2 n="4" type="line">
+                    für die vielen netten Kommentare zu meiner Rede vorgestern Abend.
+                </div2>
+                <div2 n="5" type="line">
+                    Und das meine ich ernst, teilweise deshalb \u2026 weil ich es wirklich brauchen kann!
+                </div2>
+                <div2 n="6" type="line">Versetzen Sie sich mal in meine Lage!</div2>
+                <div2 n="7" type="line">
+                    Ich bin bin acht Jahre lang mit der Air Force Two geflogen.
+                </div2>
+                <div2 n="8" type="line">
+                    Jetzt muss ich meine Schuhe ausziehen, um überhaupt an Bord zu kommen!
+                </div2>
+                <div2 n="9" type="line">(Applaus)</div2>
+            </div1>
+            <div1 n="2" type="paragraf">
+                <div2 n="1" type="line">
+                    Ich erzähle Ihnen mal eine Geschichte, dann verstehen Sie mich vielleicht besser.
+                </div2>
+                <div2 n="2" type="line">
+                    Eine wahre Geschichte \u2013 kein Wort daran ist erfunden.
+                </div2>
+                <div2 n="3" type="line">
+                    Kurz nachdem Tipper und ich aus dem \u2026 Weißen Haus ausgezogen waren,
+                </div2>
+                <div2 n="4" type="line">
+                    fuhren wir von unserem Haus in Nashville zu unserer kleinen Farm
+                </div2>
+                <div2 n="5" type="line">50 Meilen östlich von Nashville \u2013</div2>
+                <div2 n="6" type="line">und wir fuhren selbst.</div2>
+                <div2 n="7" type="line">
+                    Ich weiß, für Sie ist das nichts Ungewöhnliches, aber ...
+                </div2>
+                <div2 n="8" type="line">
+                    Ich sah in den Rückspiegel und plötzlich traf mich eine Erkenntnis.
+                </div2>
+                <div2 n="9" type="line">Hinter mir war gar keine Autokolonne.</div2>
+                <div2 n="10" type="line">Haben Sie schon mal vom Phantomschmerz gehört?</div2>
+                <div2 n="11" type="line">
+                    Wir saßen in einem gemieteten Ford Taurus. Es war Zeit zum Abendessen
+                </div2>
+                <div2 n="12" type="line">und wir hielten Ausschau nach einem Restaurant.</div2>
+                <div2 n="13" type="line">
+                    Wir waren auf der I-40. Wir kamen zu Ausfahrt 238, Lebanon, Tennessee.
+                </div2>
+                <div2 n="14" type="line">
+                    Wir fuhren ab und suchten nach einem \u2013 wir fanden schließlich ein Shoney's.
+                </div2>
+                <div2 n="15" type="line">
+                    Für alle, die sie nicht kennen: Das ist eine billige Familienrestaurantkette.
+                </div2>
+                <div2 n="16" type="line">
+                    Wir gingen rein und setzten uns in eine Nische, die Kellnerin kam zu uns
+                </div2>
+                <div2 n="17" type="line">und machte viel Aufhebens um Tipper.</div2>
+                <div2 n="18" type="line">
+                    Sie nahm unsere Bestellung auf, ging dann zum Paar in der Nische neben uns
+                </div2>
+                <div2 n="19" type="line">
+                    und senkte ihre Stimme so sehr, dass ich mich richtig anstrengen musste, um sie zu verstehen.
+                </div2>
+                <div2 n="20" type="line">
+                    Sie sagte: \u201eJa, das ist Ex-Vizepräsident Al Gore und seine Frau Tipper.\u201c
+                </div2>
+                <div2 n="21" type="line">
+                    Und der Mann antwortete: \u201eGanz schöner Abstieg, was?\u201c
+                </div2>
+            </div1>
+            <div1 n="3" type="paragraf">
+                <div2 n="1" type="line">Es gab eine ganze Reihe solcher Offenbarungen.</div2>
+                <div2 n="2" type="line">
+                    Am nächsten Tag \u2013 immer noch eine wahre Geschichte! \u2013
+                </div2>
+                <div2 n="3" type="line">
+                    flog ich in einer G5 nach Afrika, um in Nigeria eine Rede zu halten,
+                </div2>
+                <div2 n="4" type="line">in Lagos, und zwar über das Thema Energie.</div2>
+                <div2 n="5" type="line">
+                    Und zu Beginn der Rede erzählte ich dann, was mir am Vortag
+                </div2>
+                <div2 n="6" type="line">in Nashville passiert war.</div2>
+                <div2 n="7" type="line">
+                    Ich erzählte es genau so, wie ich es Ihnen gerade erzählt habe.
+                </div2>
+                <div2 n="8" type="line">
+                    Tipper und ich fuhren selbst, Shoney's, billige Familienrestaurantkette,
+                </div2>
+                <div2 n="9" type="line">was der Mann gesagt hatte \u2013 alle lachten.</div2>
+                <div2 n="10" type="line">
+                    Ich hielt meine Rede, dann fuhr ich zurück zum Flughafen, um nach Hause zu fliegen.
+                </div2>
+                <div2 n="11" type="line">
+                    Im Flugzeug schlief ich, bis wir mitten in der Nacht
+                </div2>
+                <div2 n="12" type="line">auf den Azoren landeten, um zu tanken.</div2>
+                <div2 n="13" type="line">
+                    Ich wachte auf, öffnete die Tür und ging hinaus, um frische Luft zu schnappen.
+                </div2>
+                <div2 n="14" type="line">
+                    Da sah ich plötzlich einen Mann über das Rollfeld rennen.
+                </div2>
+                <div2 n="15" type="line">Er wedelte mit einem Stück Papier und schrie:</div2>
+                <div2 n="16" type="line">
+                    \u201eRufen Sie Washington an! Rufen Sie Washington an!\u201c
+                </div2>
+                <div2 n="17" type="line">
+                    Ich dachte so bei mir, mitten in der Nacht, mitten im Atlantik,
+                </div2>
+                <div2 n="18" type="line">
+                    was in aller Welt könnte in Washington schief laufen?
+                </div2>
+                <div2 n="19" type="line">
+                    Dann fiel mir ein, dass da so einiges in Frage kam.
+                </div2>
+                <div2 n="20" type="line">(Gelächter)</div2>
+            </div1>
+            <div1 n="4" type="paragraf">
+                <div2 n="1" type="line">
+                    Aber weswegen mein Mitarbeiter so aufgeregt war, war Folgendes:
+                </div2>
+                <div2 n="2" type="line">
+                    Eine der nigerianischen Nachrichtenagenturen hatte schon eine Story über meine Rede herausgegeben.
+                </div2>
+                <div2 n="3" type="line">
+                    Und die war schon in Städten überall in den USA gedruckt worden
+                </div2>
+                <div2 n="4" type="line">
+                    \u2013 auch in Monterey, das habe ich überprüft. Und die Geschichte begann mit:
+                </div2>
+                <div2 n="5" type="line">
+                    \u201eEx-Vizepräsident Al Gore gab gestern in Nigeria bekannt:
+                </div2>
+                <div2 n="6" type="line">
+                    ,Meine Frau Tipper und ich haben ein billiges Familienrestaurant namens Shoney's eröffnet
+                </div2>
+                <div2 n="7" type="line">und wir führen es selbst.\u2018\u201c</div2>
+                <div2 n="8" type="line">Bevor ich wieder amerikanischen Boden betrat,</div2>
+                <div2 n="9" type="line">
+                    machten David Letterman und Jay Leno schon Witze über mich
+                </div2>
+                <div2 n="10" type="line">
+                    \u2013 einer von ihnen zeigte mich mit eine großen weißen Kochmütze
+                </div2>
+                <div2 n="11" type="line">
+                    und Tipper sagte: \u201eNoch einen Burger, mit Pommes!\u201c
+                </div2>
+                <div2 n="12" type="line">
+                    Drei Tage später bekam ich einen netten, langen, handgeschriebenen Brief von meinem Freund,
+                </div2>
+                <div2 n="13" type="line">
+                    Partner und Kollegen Bill Clinton, in dem er schrieb: \u201eGlückwunsch zum neuen Restaurant, Al!\u201c
+                </div2>
+                <div2 n="14" type="line">(Gelächter)</div2>
+                <div2 n="15" type="line">
+                    Wir freuen uns immer, wenn der andere Erfolg im Leben hat.
+                </div2>
+            </div1>
+            <div1 n="5" type="paragraf">
+                <div2 n="1" type="line">
+                    Ich wollte eigentlich über Informationsökologie sprechen.
+                </div2>
+                <div2 n="2" type="line">
+                    Aber ich dachte, da ich ohnehin noch sehr oft zu TED zurückkommen will,
+                </div2>
+                <div2 n="3" type="line">
+                    könnte ich das vielleicht auf ein anderes Mal verschieben.
+                </div2>
+            </div1>
+            <div1 n="6" type="paragraf">
+                <div2 n="1" type="line">Chris Anderson: Abgemacht!</div2>
+            </div1>
+            <div1 n="7" type="paragraf">
+                <div2 n="1" type="line">
+                    Ich möchte mich auf das konzentrieren, was viele von Ihnen von mir hören wollen.
+                </div2>
+                <div2 n="2" type="line">
+                    Was kann jeder Einzelne gegen die Klimakrise tun? Ich möchte beginnen mit ...
+                </div2>
+                <div2 n="3" type="line">
+                    Ich werde einige neue Bilder zeigen und nur vier oder fünf noch mal durchgehen.
+                </div2>
+                <div2 n="4" type="line">
+                    Ein Wort zur Diashow. Ich aktualisiere sie jedes Mal, bevor ich sie zeige.
+                </div2>
+                <div2 n="5" type="line">
+                    Ich füge neue Bilder hinzu, weil ich jedes Mal wieder etwas dazulerne.
+                </div2>
+                <div2 n="6" type="line">
+                    Wie beim Strandgutsammeln \u2013 jedes Mal, wenn die Flut da war,
+                </div2>
+                <div2 n="7" type="line">findet man neue Muschelschalen.</div2>
+                <div2 n="8" type="line">
+                    Erst in den letzten beiden Tagen hatten wir neue Januar-Temperaturrekorde.
+                </div2>
+                <div2 n="9" type="line">
+                    Das gilt jetzt nur für die USA. Der historische Durchschnitt für Januar
+                </div2>
+                <div2 n="10" type="line">
+                    liegt bei minus 0,6 Grad. Im letzten Monat waren es plus 4,2 Grad.
+                </div2>
+            </div1>
+            <div1 n="8" type="paragraf">
+                <div2 n="1" type="line">
+                    Ich weiß ja, dass Sie auf weitere schlechte Umweltnachrichten warten
+                </div2>
+                <div2 n="2" type="line">
+                    \u2013 ich mache nur Spaß \u2013, aber jetzt kommt erst mal eine kurze Wiederholung
+                </div2>
+                <div2 n="3" type="line">
+                    und dann zeige ich Ihnen neues Material über mögliche Lösungen.
+                </div2>
+                <div2 n="4" type="line">
+                    Aber erst wollte ich zu ein paar Dias noch etwas sagen.
+                </div2>
+                <div2 n="5" type="line">
+                    Zunächst einmal, hier steuern wir mit dem US-Beitrag zur Erderwärmung hin,
+                </div2>
+                <div2 n="6" type="line">
+                    wenn nichts unternommen wird. Endverbraucher-Effizienz bei Strom und anderen Energien,
+                </div2>
+                <div2 n="7" type="line">
+                    das sind die niedrig hängenden Trauben. Effizienz und Umweltschutz:
+                </div2>
+                <div2 n="8" type="line">
+                    Das ist kein Kostenfaktor, sondern ein Gewinnfaktor. Das Vorzeichen ist falsch.
+                </div2>
+                <div2 n="9" type="line">
+                    Es ist nicht negativ, sondern positiv. Diese Investitionen amortisieren sich von selbst.
+                </div2>
+                <div2 n="10" type="line">
+                    Aber sie lenken uns auch sehr effektiv vom richtigen Weg ab.
+                </div2>
+            </div1>
+            <div1 n="9" type="paragraf">
+                <div2 n="1" type="line">
+                    Autos und LKW \u2013 darüber habe ich in der Diashow schon gesprochen,
+                </div2>
+                <div2 n="2" type="line">
+                    aber ich möchte, dass Sie es im rechten Licht betrachten.
+                </div2>
+                <div2 n="3" type="line">
+                    Das ist ein einfacher, sichtbarer Kritikpunkt, und so sollte es auch sein,
+                </div2>
+                <div2 n="4" type="line">
+                    aber Gebäude haben einen größeren Anteil an der Erderwärmung
+                </div2>
+                <div2 n="5" type="line">als Autos und LKW.</div2>
+                <div2 n="6" type="line">
+                    Autos und LKW sind sehr wichtig und wir haben die weltweit niedrigsten Normen,
+                </div2>
+                <div2 n="7" type="line">
+                    daher sollten wir das Thema anpacken. Aber es ist nur ein Teil des Ganzen.
+                </div2>
+                <div2 n="8" type="line">
+                    Die Effizienz anderer Transportmittel ist ebenso wichtig wie bei Autos und LKW!
+                </div2>
+                <div2 n="9" type="line">
+                    Erneuerbare Energien können bei der derzeitigen Technologieeffizienz
+                </div2>
+                <div2 n="10" type="line">
+                    einiges ausmachen, und nach den Aussagen von Vinod, John Doerr und anderen,
+                </div2>
+                <div2 n="11" type="line">
+                    vielen von Ihnen \u2013 hier sind viele Menschen direkt beteiligt \u2013
+                </div2>
+                <div2 n="12" type="line">
+                    wird dieser Keil viel schneller wachsen, als die aktuelle Projektion zeigt.
+                </div2>
+                <div2 n="13" type="line">Die CO2-Sequestrierung \u2013 abgekürzt CCS \u2013</div2>
+                <div2 n="14" type="line">
+                    wird sich wahrscheinlich zum ultimativen Werkzeug entwickeln,
+                </div2>
+                <div2 n="15" type="line">
+                    mit dem wir fossile Brennstoffe auf sichere Weise weiterhin nutzen können.
+                </div2>
+                <div2 n="16" type="line">Da sind wir noch nicht ganz.</div2>
+            </div1>
+            <div1 n="10" type="paragraf">
+                <div2 n="1" type="line">
+                    So. Was kann nun der Einzelne tun? Emissionen im eigenen Haus reduzieren.
+                </div2>
+                <div2 n="2" type="line">
+                    Die meisten dieser Ausgaben sparen langfristig auch Geld.
+                </div2>
+                <div2 n="3" type="line">
+                    Isolierung, besseres Baudesign, kaufen Sie möglichst umweltfreundlichen Strom.
+                </div2>
+                <div2 n="4" type="line">
+                    Ich sprach von Autos \u2013 kaufen SIe eins mit Hybridantrieb. Nutzen Sie den ÖPNV.
+                </div2>
+                <div2 n="5" type="line">
+                    Sehen Sie sich nach anderen, besseren Lösungen um. Das ist wichtig.
+                </div2>
+            </div1>
+            <div1 n="11" type="paragraf">
+                <div2 n="1" type="line">
+                    Kaufen Sie grün. Bei allem, was Sie einkaufen, haben Sie die Wahl
+                </div2>
+                <div2 n="2" type="line">
+                    zwischen Produkten mit ungünstigen und deutlich weniger ungünstigen
+                </div2>
+                <div2 n="3" type="line">Auswirkungen auf die globale Klimakrise.</div2>
+                <div2 n="4" type="line">
+                    Treffen Sie eine Entscheidung für ein CO2-neutrales Leben.
+                </div2>
+                <div2 n="5" type="line">
+                    Diejenigen von Ihnen, die sich mit Slogans auskennen,
+                </div2>
+                <div2 n="6" type="line">ich wäre sehr dankbar für Tipps und Hilfe,</div2>
+                <div2 n="7" type="line">
+                    wie man das so formulieren kann, dass es bei der Masse ankommt.
+                </div2>
+                <div2 n="8" type="line">Es ist einfacher, als Sie glauben. Wirklich.</div2>
+                <div2 n="9" type="line">
+                    Viele von uns hier haben diese Entscheidung getroffen, und es ist wirklich nicht schwer.
+                </div2>
+                <div2 n="10" type="line">
+                    Reduzieren Sie Ihre CO2-Emissionen durch jede Wahl, die Sie treffen können,
+                </div2>
+                <div2 n="11" type="line">
+                    und kaufen oder erwerben Sie einen Ausgleich für den Rest, den Sie nicht
+                </div2>
+                <div2 n="12" type="line">
+                    vermeiden können. Genauer wird das auf climatecrisis.net erklärt.
+                </div2>
+            </div1>
+            <div1 n="12" type="paragraf">
+                <div2 n="1" type="line">
+                    Da gibt es einen CO2-Rechner. Participant Productions hat unter meiner
+                </div2>
+                <div2 n="2" type="line">
+                    aktiven Teilnahme die führenden Programmierer der Welt zusammengerufen,
+                </div2>
+                <div2 n="3" type="line">
+                    um aus dieser geheimnisvollen Kunst der CO2-Berechnung
+                </div2>
+                <div2 n="4" type="line">einen anwenderfreundlichen CO2-Rechner zu basteln.</div2>
+                <div2 n="5" type="line">
+                    Sie können sehr genau Ihre persönlichen CO2-Emissionen berechnen
+                </div2>
+                <div2 n="6" type="line">
+                    und erfahren dann Möglichkeiten, sie zu reduzieren.
+                </div2>
+                <div2 n="7" type="line">
+                    Bis zum Fillmstart im Mai wird es ein Update auf Version 2.0 geben,
+                </div2>
+                <div2 n="8" type="line">
+                    in der man sich dann direkt zum Kauf von Ausgleichseinheiten durchklicken kann.
+                </div2>
+            </div1>
+            <div1 n="13" type="paragraf">
+                <div2 n="1" type="line">
+                    Versuchen Sie, Ihr Unternehmen CO2-neutral zu führen. Auch das haben einige hier schon getan,
+                </div2>
+                <div2 n="2" type="line">
+                    und es ist nicht so schwierig, wie man meint. Beziehen Sie Klimalösungen in Ihre Innovationen mit ein,
+                </div2>
+                <div2 n="3" type="line">egal, ob Sie im Bereich Technologie, Unterhaltung</div2>
+                <div2 n="4" type="line">oder Konstruktion und Architektur arbeiten.</div2>
+                <div2 n="5" type="line">
+                    Investieren Sie nachhaltig. Davon hat Majora schon gesprochen.
+                </div2>
+                <div2 n="6" type="line">
+                    Wissen Sie, wenn Sie Geld in Manager investieren, die Sie
+                </div2>
+                <div2 n="7" type="line">auf der Grundlage ihrer Jahresleistung entlohnen,</div2>
+                <div2 n="8" type="line">
+                    dann beklagen Sie sich nie wieder über kurzsichtiges Management.
+                </div2>
+                <div2 n="9" type="line">
+                    Langfristig tun die Leute, wofür man sie bezahlt. Und wenn sie aufgrund von
+                </div2>
+                <div2 n="10" type="line">
+                    kurzfristigen Gewinnen beurteilen, wie viel sie aus Ihrem investierten
+                </div2>
+                <div2 n="11" type="line">
+                    Kapital herausholen können, dann treffen sie kurzfristige Entscheidungen.
+                </div2>
+                <div2 n="12" type="line">Darüber lässt sich noch so einiges sagen.</div2>
+            </div1>
+            <div1 n="14" type="paragraf">
+                <div2 n="1" type="line">
+                    Werden Sie ein Katalysator des Umdenkens. Lehren Sie andere, lernen Sie, reden Sie darüber.
+                </div2>
+                <div2 n="2" type="line">
+                    Der Film kommt \u2013 das ist eine Filmversion der Diashow,
+                </div2>
+                <div2 n="3" type="line">
+                    die ich vorgestern gezeigt habe, nur viel unterhaltsamer. Und er kommt im Mai heraus.
+                </div2>
+                <div2 n="4" type="line">
+                    Viele von Ihnen hier können dafür sorgen, dass eine Menge Leute ihn sehen.
+                </div2>
+                <div2 n="5" type="line">
+                    Schicken Sie jemanden nach Nashville. Suchen Sie ihn sorgfältig aus.
+                </div2>
+                <div2 n="6" type="line">
+                    Und ich werde persönlich Menschen schulen, diese Diashow zu zeigen, abgewandelt,
+                </div2>
+                <div2 n="7" type="line">
+                    die persönlichen Geschichten werden natürlich durch etwas Allgemeineres ersetzt,
+                </div2>
+                <div2 n="8" type="line">
+                    und \u2013 es geht nicht nur um die Dias, sondern um ihre Bedeutung. Und ihren Zusammenhang.
+                </div2>
+                <div2 n="9" type="line">
+                    Daher werde ich in diesem Sommer einen Kurs für eine Gruppe
+                </div2>
+                <div2 n="10" type="line">
+                    von Menschen abhalten, die von verschiedenen Leuten dafür nominiert werden,
+                </div2>
+                <div2 n="11" type="line">
+                    diesen Vortrag massenweise in Gemeinden im ganzen Land zu halten,
+                </div2>
+                <div2 n="12" type="line">
+                    und wir werden die Diashow für alle regelmäßig jede Woche aktualisieren,
+                </div2>
+                <div2 n="13" type="line">damit sie immer topaktuell ist.</div2>
+                <div2 n="14" type="line">
+                    In Zusammenarbeit mit Larry Lessig wird sie demnächst auch
+                </div2>
+                <div2 n="15" type="line">
+                    mit Tools und eingeschränkten Nutzungsrechten veröffentlicht werden,
+                </div2>
+                <div2 n="16" type="line">
+                    damit junge Leute eigene Remixe herstellen und sie auf ihre Art präsentieren können.
+                </div2>
+                <div2 n="17" type="line">(Applaus)</div2>
+            </div1>
+            <div1 n="15" type="paragraf">
+                <div2 n="1" type="line">
+                    Woher stammt nur die Empfehlung, von Politik sollte man sich fernhalten?
+                </div2>
+                <div2 n="2" type="line">
+                    Das bedeutet nicht, dass ich versuchen will, aus Republikanern Demokraten zu machen.
+                </div2>
+                <div2 n="3" type="line">
+                    Wir brauchen auch Republikaner. Das war früher ein parteiübergreifendes Thema,
+                </div2>
+                <div2 n="4" type="line">
+                    und in dieser Gruppe ist es das ebenfalls. Werden Sie politisch aktiv.
+                </div2>
+                <div2 n="5" type="line">
+                    Sorgen Sie dafür, dass unsere Demokratie so funktioniert, wie sie sollte.
+                </div2>
+                <div2 n="6" type="line">
+                    Unterstützen Sie die Beschränkung von CO2-Emissionen, Umweltverschmutzung
+                </div2>
+                <div2 n="7" type="line">
+                    und Emissionshandel. Und zwar aus folgendem Grund: Solange die USA außen vor bleiben,
+                </div2>
+                <div2 n="8" type="line">ist das Weltsystem kein geschlossenes System.</div2>
+                <div2 n="9" type="line">
+                    Sobald es ein geschlossenes System wird, mit Beteiligung der USA,
+                </div2>
+                <div2 n="10" type="line">dann wird jedes Vorstandsmitglied \u2013</div2>
+                <div2 n="11" type="line">
+                    wie viele von Ihnen sitzen im Vorstand eines Unternehmens?
+                </div2>
+                <div2 n="12" type="line">
+                    In einem geschlossenen System sind Sie gesetzlich haftbar, wenn Sie Ihren Generaldirektor
+                </div2>
+                <div2 n="13" type="line">
+                    nicht drängen, maximales Einkommen aus der Reduzierung und dem Handel mit
+                </div2>
+                <div2 n="14" type="line">
+                    unvermeidlichen CO2-Emissionen zu erzielen. Der Markt wird dieses Problem lösen, wenn wir das schaffen.
+                </div2>
+                <div2 n="15" type="line">
+                    Helfen Sie bei der groß angelegten Meinungskampagne, die im Frühling beginnt.
+                </div2>
+                <div2 n="16" type="line">
+                    Wir müssen die Amerikaner zum Umdenken bringen. Denn gegenwärtig
+                </div2>
+                <div2 n="17" type="line">
+                    dürfen die Politiker nicht das tun, was getan werden muss.
+                </div2>
+            </div1>
+            <div1 n="16" type="paragraf">
+                <div2 n="1" type="line">
+                    Und in unserem modernen Land ist es nicht mehr wie früher Aufgabe von Logik und Vernunft,
+                </div2>
+                <div2 n="2" type="line">
+                    zwischen Wohlstand und Macht zu vermitteln, wie es früher einmal war.
+                </div2>
+                <div2 n="3" type="line">
+                    Heute braucht man viele kurze, brandaktuelle, 30 oder 28 Sekunden lange Fernsehspots.
+                </div2>
+                <div2 n="4" type="line">Wir müssen eine Menge solcher Spots kaufen.</div2>
+                <div2 n="5" type="line">
+                    Wir sollten die Erderwärmung umbenennen, wie viele von Ihnen vorgeschlagen haben.
+                </div2>
+                <div2 n="6" type="line">
+                    Mir gefällt \u201eKlimakrise\u201c besser als \u201eKlimakatastrophe\u201c,
+                </div2>
+                <div2 n="7" type="line">
+                    aber noch mal, ich brauche Hilfe von Leuten, die sich mit Markenentwicklung auskennen.
+                </div2>
+                <div2 n="8" type="line">
+                    Ein Wissenschaftler sagte mal zu mir, wir stünden jetzt vor der Prüfung,
+                </div2>
+                <div2 n="9" type="line">ob die Kombination aus einem opponierbaren Daumen</div2>
+                <div2 n="10" type="line">und einem Neocortex überhaupt lebensfähig ist.</div2>
+                <div2 n="11" type="line">
+                    Das stimmt. Wie ich vorgestern schon sagte: Das ist kein politisches Thema.
+                </div2>
+                <div2 n="12" type="line">
+                    Noch mal an alle Republikaner hier: Es sollte dabei nicht um Parteipolitik gehen.
+                </div2>
+                <div2 n="13" type="line">
+                    Sie haben mehr Einfluss als einige von uns Demokraten.
+                </div2>
+                <div2 n="14" type="line">
+                    Dies ist eine Gelegenheit. Nicht nur das, sondern in Verbindung mit den anderen Ideen hier
+                </div2>
+                <div2 n="15" type="line">können wir einen größeren Zusammenhang herstellen.</div2>
+                <div2 n="16" type="line">Wir sind eins.</div2>
+                <div2 n="17" type="line">Ich danke Ihnen vielmals.</div2>
+                <div2 n="18" type="line">(Applaus)</div2>
+            </div1>
+        </passage>
+        <license/>
+        <source>
+            TED subtitle retrieved via Canonical Text Service with CTS URN urn:cts:ted:1.de:
+        </source>
+    </reply>
+</GetPassage>

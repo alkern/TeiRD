@@ -1,0 +1,42 @@
+<?xml-stylesheet type="text/xsl" href="template.xsl"?>
+<GetPassage xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:cts="http://chs.harvard.edu/xmlns/cts" xmlns:tei="http://www.tei-c.org/ns/1.0">
+    <request>
+        <requestName>GetPassage</requestName>
+        <requestUrn>urn:cts:songs:christmas.ohtennenbaum.de:</requestUrn>
+    </request>
+    <reply>
+        <urn>urn:cts:songs:christmas.ohtennenbaum.de:</urn>
+        <passage>
+            <div1 n="1" type="song">
+                <div2 n="1" type="strophe">
+                    <div3 n="1" type="line">O Tannenbaum, O Tannenbaum,</div3>
+                    <div3 n="2" type="line">Wie treu sind deine Blätter.</div3>
+                    <div3 n="3" type="line">Du grünst nicht nur zur Sommerzeit,</div3>
+                    <div3 n="4" type="line">Nein auch im Winter wenn es schneit.</div3>
+                    <div3 n="5" type="line">O Tannenbaum, O Tannenbaum,</div3>
+                    <div3 n="6" type="line">Wie grün sind deine Blätter!</div3>
+                </div2>
+                <div2 n="2" type="strophe">
+                    <div3 n="1" type="line">O Tannenbaum, O Tannenbaum,</div3>
+                    <div3 n="2" type="line">Du kannst mir sehr gefallen!</div3>
+                    <div3 n="3" type="line">Wie oft hat schon zur Winterszeit</div3>
+                    <div3 n="4" type="line">Ein Baum von dir mich hoch erfreut!</div3>
+                    <div3 n="5" type="line">O Tannenbaum, O Tannenbaum,</div3>
+                    <div3 n="6" type="line">Du kannst mir sehr gefallen!</div3>
+                </div2>
+                <div2 n="3" type="strophe">
+                    <div3 n="1" type="line">O Tannenbaum, O Tannenbaum,</div3>
+                    <div3 n="2" type="line">Dein Kleid will mich was lehren:</div3>
+                    <div3 n="3" type="line">Die Hoffnung und Beständigkeit</div3>
+                    <div3 n="4" type="line">Gibt Mut und Kraft zu jeder Zeit!</div3>
+                    <div3 n="5" type="line">O Tannenbaum, O Tannenbaum,</div3>
+                    <div3 n="6" type="line">Dein Kleid will mich was lehren.</div3>
+                </div2>
+            </div1>
+        </passage>
+        <license/>
+        <source>
+            Retrieved via Canonical Text Service www.cts.informatik.uni-leipzig.de with CTS URN urn:cts:songs:christmas.ohtennenbaum.de:
+        </source>
+    </reply>
+</GetPassage>

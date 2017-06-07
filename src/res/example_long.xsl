@@ -6,12 +6,14 @@
   xmlns:s="http://relaxng.org/ns/structure/1.0"
   xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
   xmlns:tei="http://www.tei-c.org/ns/1.0">
+  <xsl:output method="html"
+              encoding="UTF-8"
+              indent="yes"/>
 
   <xsl:template match="/">
     <html>
       <head>
-        <title>Long Example</title>
-        <link rel="stylesheet" type="text/css" href="../styles/default.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/default.css"/>
       </head>
       <body>
         <xsl:apply-templates/>
@@ -39,7 +41,7 @@
         </xsl:when>
         <!-- Beschreibung des Aktes -->
         <xsl:when test="@type[.='stage']">
-          <div><em><xsl:value-of select="."/></em></div>
+          <em><xsl:value-of select="."/></em><br/>
         </xsl:when>
         <!-- restlicher Text -->
         <xsl:when test="@type[.='sp']">
@@ -62,17 +64,17 @@
     <xsl:param name="div"/>
     <xsl:choose>
       <xsl:when test="@type[.='speaker']">
-        <b><xsl:value-of select="."/></b>
+        <b><xsl:value-of select="."/></b><br/>
       </xsl:when>
       <xsl:when test="@type[.='stage']">
-        <div><em><xsl:value-of select="."/></em></div>
+        <em><xsl:value-of select="."/></em><br/>
       </xsl:when>
       <xsl:when test="@type[.='l']">
-        <div><xsl:value-of select="."/></div>
+        <xsl:value-of select="."/><br/>
       </xsl:when>
       <xsl:when test="@type[.='lg']">
         <xsl:for-each select=".//s:div6">
-          <div><xsl:value-of select="."/></div>
+          <xsl:value-of select="."/><br/>
         </xsl:for-each>
       </xsl:when>
       <xsl:otherwise/>
