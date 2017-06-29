@@ -9,15 +9,15 @@
                 indent="yes"/>
 
     <xsl:template match="/">
-        <html>
-            <head>
-                <link rel="stylesheet" type="text/css" href="../styles/default.css"/>
-            </head>
-            <body>
-                <xsl:apply-templates/>
-            </body>
-        </html>
-    </xsl:template>
+    <html>
+        <head>
+            <link rel="stylesheet" type="text/css" href="../styles/default.css"/>
+        </head>
+        <body>
+            <xsl:apply-templates/>
+        </body>
+    </html>
+</xsl:template>
 
     <!-- Identity template -->
     <xsl:template match="@* | node()">
@@ -160,6 +160,15 @@
     <xsl:template match="s:div2[@type = 'line']">
         <xsl:apply-templates select="@* |node()"/>
         <br/>
+    </xsl:template>
+
+
+
+    <!-- Kopiert alle übrigen div-Elemente und behält Typ -->
+    <xsl:template match="*[starts-with(name(), 'div')]" priority="0">
+        <div type="{@type}">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
     </xsl:template>
 
 

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="regex_test.xsl"?>
+<a>
+  <div1 type="typ1"/>
+  <div2 type="typ2"/>
+  <div3 type="typ3"/>
+</a>
