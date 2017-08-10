@@ -8,6 +8,7 @@
                 encoding="UTF-8"
                 indent="yes"/>
 
+    <!-- Outer template -->
     <xsl:template match="/">
         <html>
             <head>
