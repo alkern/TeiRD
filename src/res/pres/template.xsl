@@ -168,6 +168,15 @@
 
 
 
+    <!-- Kopiert alle übrigen div-Elemente und behält Typ -->
+    <xsl:template match="*[starts-with(name(), 'div')]" priority="0">
+        <div type="{@type}">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
+    </xsl:template>
+
+
+
     <!-- ignorierte Tags -->
     <xsl:template match="tei:title"/>
     <xsl:template match="s:requestName"/>
