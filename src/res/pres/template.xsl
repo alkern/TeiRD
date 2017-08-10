@@ -12,10 +12,13 @@
     <xsl:template match="/">
         <html>
             <head>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
                 <link rel="stylesheet" type="text/css" href="../styles/default.css"/>
             </head>
             <body>
-                <xsl:apply-templates/>
+                <div class="container">
+                    <xsl:apply-templates/>
+                </div>
             </body>
         </html>
     </xsl:template>
