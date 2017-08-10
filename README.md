@@ -31,3 +31,8 @@ Um einen Knoten durch einen HTML-Knoten zu ersetzten, benötigt das XSL-Styleshe
 ## Styles
 
 Neben Bootstrap für responsives Design umfasst das Projekt ein CSS-Stylesheet. In diesem lassen sich Regeln zur Darstellung bestimmter Elemente nutzen. Die Elemente lassen sich zum Beispiel über das **class**-Attribut feststellen. Damit bietet der Renderer die gesamte Mächtigkeit von CSS, und lässt sich bei Bedarf auch mit SASS oder ähnlichem erweitern.
+
+## Weitere Eigenschaften
+
+* Divs, für die keine spezielle Regel definiert ist, wandelt das Skript zu HTML-Divs um und nutzt das _type_-Attribut als Klasse
+* Knoten, die im Zieldokument nicht benötigt werden, lassen sich durch _template_-Tags mit leerem Körper löschen
