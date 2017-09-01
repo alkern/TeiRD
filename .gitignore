@@ -1,4 +1,5 @@
 local.sh
 .idea
 teird.iml
-
+server/build
+server/out
