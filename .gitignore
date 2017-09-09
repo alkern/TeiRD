@@ -3,3 +3,7 @@ local.sh
 teird.iml
 server/build
 server/out
+
+server/server.iml
+server/.gradle
+server/.idea
