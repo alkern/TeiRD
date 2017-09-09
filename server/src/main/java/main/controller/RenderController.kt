@@ -32,7 +32,7 @@ class RenderController {
 
     @RequestMapping("/{cts}/{server}/{urn:.+}")
     fun render(@PathVariable cts: String, @PathVariable urn: String, @PathVariable server: String,
-               @RequestParam(defaultValue = "default") style: String = "default"): String {
+               @RequestParam(defaultValue = "default") style: String): String {
         val urnResource = Urn.new(urn)
         if (urnResource == null) return INVALID_URN
 
@@ -43,9 +43,8 @@ class RenderController {
         val target = XslTransformator(xsltStylesheet).transform(source)
 
         val stylesheet = loader.loadStylesheet(style)
-        target.replaceFirst("TOREPLACE", stylesheet)
 
-        return target
+        return target.replaceFirst("TOREPLACE", stylesheet)
     }
 }
 
@@ -84,7 +83,7 @@ class FileLoader {
     }
 
     fun loadStylesheet(style: String): String {
-        return "$style.css"
+        return "../../$style.css"
     }
 }
 
