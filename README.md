@@ -13,7 +13,7 @@ XSL-Transformationen bieten die Möglichkeit, XML-basierte Dokumente nach defini
 
 ### Server nutzen
 
-Die Serveranwendung lässt sich über folgende URL aufrufen: ```<server>:8080/view/<ctsname>/<ctsserver>/<urn><?style=...>```
+Die Serveranwendung lässt sich über folgende URL aufrufen: ```<server>:8080/view/<cts>/<ctsname>/<urn><?style=...>```
 
 cts ist dabei im Normalfall cts, alternativ auch ctstest möglich
 
