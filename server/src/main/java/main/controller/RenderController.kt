@@ -25,11 +25,6 @@ class RenderController {
 
     private val INVALID_URN = "invalid urn"
 
-    @RequestMapping("/")
-    fun root(): String {
-        return "Home"
-    }
-
     @RequestMapping("/{cts}/{server}/{urn:.+}")
     fun render(@PathVariable cts: String, @PathVariable urn: String, @PathVariable server: String,
                @RequestParam(defaultValue = "default") style: String): String {
