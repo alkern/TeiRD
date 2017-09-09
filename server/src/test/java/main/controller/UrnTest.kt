@@ -15,7 +15,7 @@ class UrnTest {
         }
         assertEquals("ns", validUrn.namespace)
         assertEquals("test", validUrn.work)
-        assertEquals("", validUrn.passage)
+        assertEquals(null, validUrn.passage)
         assertEquals(null, validUrn.subreference)
 
         val validUrn2 = Urn.new("urn:cts:ns:test:passage")
@@ -39,19 +39,29 @@ class UrnTest {
         assertEquals("sub", validUrn3.subreference)
     }
 
+    @Test
     fun testEmptyUrnThrowsException() {
         assertEquals(null, Urn.new(""))
     }
 
+    @Test
     fun testTooShortUrnThrowsException() {
         assertEquals(null, Urn.new("urn:cts"))
     }
 
+    @Test
     fun testMissingUrnThrowsException() {
         assertEquals(null, Urn.new("cts:ns:work:passage"))
     }
 
+    @Test
     fun testMissingctsThrowsException() {
         assertEquals(null, Urn.new("urn:work:passage"))
+    }
+
+    @Test
+    fun testExampleToString() {
+        assertEquals("?request=GetPassage&urn=urn:cts:tg:IbsenHenrik.BrandEindramatischesGedicht:1-5",
+                Urn.new("urn:cts:tg:IbsenHenrik.BrandEindramatischesGedicht:1-5")?.getUrlParams())
     }
 }
