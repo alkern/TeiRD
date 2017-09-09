@@ -36,6 +36,7 @@ dependencies {
     testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile("junit:junit:4.12")
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 }
 compileKotlin {
     kotlinOptions {
@@ -46,4 +47,11 @@ compileTestKotlin {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+}
+springBoot {
+    mainClass = "de.werkelmann.rekote.server.ServerMainKt"
+}
+configurations {
+    compile.exclude module: 'spring-boot-starter-tomcat'
+    compile.exclude group: 'org.apache.tomcat'
 }
