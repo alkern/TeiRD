@@ -20,7 +20,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'war'
 
 jar {
-    baseName = 'gs-rest-service'
+    baseName = 'renderer'
     version =  '0.1.0'
 }
 
@@ -50,8 +50,4 @@ compileTestKotlin {
 }
 springBoot {
     mainClass = "de.werkelmann.rekote.server.ServerMainKt"
-}
-configurations {
-    compile.exclude module: 'spring-boot-starter-tomcat'
-    compile.exclude group: 'org.apache.tomcat'
 }
