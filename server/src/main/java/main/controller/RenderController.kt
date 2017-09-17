@@ -47,7 +47,7 @@ class FileLoader {
     }
 
     fun loadTransformationStylesheet(): StreamSource {
-        return StreamSource(File("tomcat/webapps/renderer/WEB-INF/classes/template.xsl"))
+        return StreamSource(File("webapps/renderer/WEB-INF/classes/template.xsl"))
     }
 
     fun loadStylesheet(style: String): String {
