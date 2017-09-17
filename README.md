@@ -6,20 +6,17 @@ XSL-Transformationen bieten die Möglichkeit, XML-basierte Dokumente nach defini
 
 ### Server auf Tomcat deployen
 
-* WAR mithilfe von ```gradle build``` bauen. Das Archiv findet sich im [lib-Verzeichnis](./server/build/libs) 
-* WAR als view.war ins webapps-Verzeichnis des Tomcat kopieren und Tomcat starten
-* [XSLT-Stylesheet](./server/src/main/resources/template.xsl) in den von Tomcat erstellten view-Ordner kopieren
-* CSS-Stylesheets lassen sich ebenfalls im view-Ordner unter Webapps ablegen
+* WAR mithilfe von ```gradle build``` bauen. Das Archiv findet sich im [lib-Verzeichnis](./server/build/libs)
+* WAR als renderer.war ins webapps-Verzeichnis des Tomcat kopieren und Tomcat starten
+* CSS-Stylesheets lassen sich im renderer-Ordner unter Webapps ablegen
 
 ### Server nutzen
 
-Die Serveranwendung lässt sich über folgende URL aufrufen: ```<server>:8080/view/<cts>/<ctsname>/<urn><?style=...>```
-
-cts ist dabei im Normalfall cts, alternativ auch ctstest möglich
+Die Serveranwendung lässt sich über folgende URL aufrufen: ```<server>:8080/renderer/<ctsname>/<urn><?style=...>```
 
 ctsname entspricht dem Namen des konkreten CTS, zum Beispiel demo, textgrid, ...
 
-Die URN ist wie bei der normalen Anwendung in der Form ```urn:cts:<namespace>:<work>:<passage>:<subreference>```
+Die URN entspricht dabei der URN wie sie auch das normale CTS nutzt
 
 Über den optionalen Query-Parameter _style_ lässt sich ein bestimmtes CSS-Stylesheet mit dem übergebenen Namen aufrufen. Ohne Parameter nutzt die Anwendung _default.css_
 
@@ -33,7 +30,7 @@ Die URN ist wie bei der normalen Anwendung in der Form ```urn:cts:<namespace>:<w
 
 ### Skript
 
-Das Skript nutzt das __Identity Template__ um Knoten umzuwandeln, und dabei die ursprüngliche Hierarchie des Dokuments zu bewahren.
+Das Skript nutzt das __Identity Template__ um Knoten umzuwandeln, und dabei die ursprüngliche Hierarchie des Dokuments zu bewahren. Es befindet sich im Ordner ``renderer/WEB_INF/classes`` und kann jederzeit verändert werden.
 
 ### Outer Template
 
