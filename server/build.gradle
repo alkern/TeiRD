@@ -28,8 +28,8 @@ repositories {
     mavenCentral()
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 1.6
+targetCompatibility = 1.6
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
@@ -40,12 +40,12 @@ dependencies {
 }
 compileKotlin {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "1.6"
     }
 }
 compileTestKotlin {
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "1.6"
     }
 }
 springBoot {

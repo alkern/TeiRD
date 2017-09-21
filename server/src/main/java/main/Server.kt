@@ -7,7 +7,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer
 
 @SpringBootApplication
 open class Server: SpringBootServletInitializer() {
-    override protected fun configure(builder: SpringApplicationBuilder?): SpringApplicationBuilder {
+    override fun configure(builder: SpringApplicationBuilder?): SpringApplicationBuilder {
         return builder!!.sources(Server::class.java)
     }
 }

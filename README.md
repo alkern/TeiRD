@@ -20,6 +20,8 @@ Die URN entspricht dabei der URN wie sie auch das normale CTS nutzt
 
 Über den optionalen Query-Parameter _style_ lässt sich ein bestimmtes CSS-Stylesheet mit dem übergebenen Namen aufrufen. Ohne Parameter nutzt die Anwendung _default.css_
 
+Alle verfügbaren Styles lassen sich über ```<server>:8080/renderer/styles``` abrufen
+
 ## Renderer
 
 ### Nötige Vorkenntnisse

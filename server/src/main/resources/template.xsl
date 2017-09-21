@@ -14,6 +14,7 @@
             <head>
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
                 <link rel="stylesheet" type="text/css" href="TOREPLACE"/>
+                <title>CTS-Renderer</title>
             </head>
             <body>
                 <div class="container">

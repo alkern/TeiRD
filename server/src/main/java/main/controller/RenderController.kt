@@ -26,7 +26,7 @@ class RenderController {
     private val INVALID_URN = "invalid urn"
 
     @RequestMapping("/{server}/{urn:.+}")
-    fun render(@PathVariable urn: String, @PathVariable server: String,
+    fun render(@PathVariable server: String, @PathVariable urn: String,
                @RequestParam(defaultValue = "default") style: String): String {
         val loader = FileLoader()
 
@@ -37,6 +37,20 @@ class RenderController {
         val stylesheet = loader.loadStylesheet(style)
 
         return target.replaceFirst("TOREPLACE", stylesheet)
+    }
+
+    @RequestMapping("/styles")
+    fun getStyles(): String {
+        val builder = StringBuilder()
+        builder.append("<title>CTS-Renderer Styles</title>")
+        builder.append("Usable Styles:<br/>")
+        val folder = File("/var/lib/tomcat7/webapps/renderer")
+        folder.listFiles()
+                .map { it.name }
+                .filter { it.endsWith(".css") }
+                .map { it.replace(".css", "") }
+                .forEach { builder.append(it + "<br/>") }
+        return builder.toString()
     }
 }
 
@@ -65,11 +79,15 @@ class HTTPClient {
     }
 
     fun get(server: String, urnResource: String): String {
-        val uri = "http://cts.informatik.uni-leipzig.de/$server/cts/?request=GetPassage&urn=$urnResource&configuration=divs=true_escapepassage=false"
-        println(uri)
+        val uri = generateURI(server, urnResource)
         val requestEntity = HttpEntity<String>("", headers)
         val responseEntity = rest.exchange(uri, HttpMethod.GET, requestEntity, String::class.java)
         return responseEntity.body.toString()
+    }
+
+    private fun generateURI(server: String, urn: String): String {
+        return "http://cts.informatik.uni-leipzig.de/$server/cts/" +
+                "?request=GetPassage&urn=$urn&configuration=divs=true_escapepassage=false"
     }
 }
 
@@ -81,5 +99,4 @@ class XslTransformator(val style: StreamSource) {
         transformer.transform(xmlSource, result)
         return stream.toString(StandardCharsets.UTF_8.name())
     }
-
 }
