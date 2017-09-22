@@ -7,8 +7,9 @@ XSL-Transformationen bieten die Möglichkeit, XML-basierte Dokumente nach defini
 ### Server auf Tomcat deployen
 
 * WAR mithilfe von ```gradle build``` bauen. Das Archiv findet sich im [lib-Verzeichnis](./server/build/libs)
-* WAR als renderer.war ins webapps-Verzeichnis des Tomcat kopieren und Tomcat starten
-* CSS-Stylesheets lassen sich im renderer-Ordner unter Webapps ablegen
+* WAR ins webapps-Verzeichnis des Tomcat kopieren und Tomcat starten
+* CSS-Stylesheets lassen sich im Anwendungsverzeichnis unter Webapps ablegen
+* Die Konfiguration findet sich in der Datei ```<Anwendungsverzeichnis>/WEB-INF/classes/config.properties```. In dieser müssen der CTS-Server (server-path und server-port), sowie der Pfad zum Webapps-Verzeichnis (webapps-dir) und der Name der Anwendung/war (app-name) angegeben sein. 
 
 ### Server nutzen
 
@@ -21,6 +22,8 @@ Die URN entspricht dabei der URN wie sie auch das normale CTS nutzt
 Über den optionalen Query-Parameter _style_ lässt sich ein bestimmtes CSS-Stylesheet mit dem übergebenen Namen aufrufen. Ohne Parameter nutzt die Anwendung _default.css_
 
 Alle verfügbaren Styles lassen sich über ```<server>:8080/renderer/styles``` abrufen
+
+Änderungen in der Konfiguration erfordern einen Neustart der Anwendung.
 
 ## Renderer
 

@@ -1,5 +1,9 @@
 package main.controller
 
+import org.springframework.beans.factory.annotation.Value
+import org.springframework.context.annotation.PropertySource
+import org.springframework.context.annotation.PropertySources
+import org.springframework.core.io.Resource
 import org.springframework.http.HttpEntity
 import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpMethod
@@ -13,6 +17,7 @@ import java.io.ByteArrayOutputStream
 import java.io.File
 import java.io.FileInputStream
 import java.nio.charset.StandardCharsets
+import java.util.*
 import javax.xml.transform.Result
 import javax.xml.transform.Source
 import javax.xml.transform.TransformerFactory
@@ -23,12 +28,17 @@ import javax.xml.transform.stream.StreamSource
 @RestController
 class RenderController {
 
-    private val INVALID_URN = "invalid urn"
+    private val props = Properties()
+
+    init {
+        val propFile = File(this::class.java.classLoader.getResource("config.properties").file)
+        props.load(FileInputStream(propFile))
+    }
 
     @RequestMapping("/{server}/{urn:.+}")
     fun render(@PathVariable server: String, @PathVariable urn: String,
                @RequestParam(defaultValue = "default") style: String): String {
-        val loader = FileLoader()
+        val loader = FileLoader(props)
 
         val source = loader.getXmlSource(server, urn)
         val xsltStylesheet = loader.loadTransformationStylesheet()
@@ -43,8 +53,8 @@ class RenderController {
     fun getStyles(): String {
         val builder = StringBuilder()
         builder.append("<title>CTS-Renderer Styles</title>")
-        builder.append("Usable Styles:<br/>")
-        val folder = File("/var/lib/tomcat7/webapps/renderer")
+        builder.append("Verfügbare Styles:<br/>")
+        val folder = File("${props.read(Config.DIR)}/${props.read(Config.APP)}")
         folder.listFiles()
                 .map { it.name }
                 .filter { it.endsWith(".css") }
@@ -54,14 +64,15 @@ class RenderController {
     }
 }
 
-class FileLoader {
+class FileLoader(private val props: Properties) {
     fun getXmlSource(server: String, urnResource: String): Source {
-        val xmlSource = HTTPClient().get(server, urnResource)
+        val xmlSource = HTTPClient(props).get(server, urnResource)
         return StreamSource(ByteArrayInputStream(xmlSource.toByteArray(StandardCharsets.UTF_8)))
     }
 
     fun loadTransformationStylesheet(): StreamSource {
-        return StreamSource(File("webapps/renderer/WEB-INF/classes/template.xsl"))
+        val path = "${props.read(Config.DIR)}/${props.read(Config.APP)}/WEB-INF/classes/template.xsl"
+        return StreamSource(File(path))
     }
 
     fun loadStylesheet(style: String): String {
@@ -69,7 +80,7 @@ class FileLoader {
     }
 }
 
-class HTTPClient {
+class HTTPClient(private val props: Properties) {
     private val rest: RestTemplate = RestTemplate()
     private val headers: HttpHeaders = HttpHeaders()
 
@@ -86,12 +97,12 @@ class HTTPClient {
     }
 
     private fun generateURI(server: String, urn: String): String {
-        return "http://cts.informatik.uni-leipzig.de/$server/cts/" +
+        return "http://${props.read(Config.SERVER)}:${props.read(Config.PORT)}/$server/cts/" +
                 "?request=GetPassage&urn=$urn&configuration=divs=true_escapepassage=false"
     }
 }
 
-class XslTransformator(val style: StreamSource) {
+class XslTransformator(private val style: StreamSource) {
     fun transform(xmlSource: Source): String {
         val transformer = TransformerFactory.newInstance().newTransformer(style)
         val stream = ByteArrayOutputStream()
@@ -99,4 +110,15 @@ class XslTransformator(val style: StreamSource) {
         transformer.transform(xmlSource, result)
         return stream.toString(StandardCharsets.UTF_8.name())
     }
+}
+
+enum class Config(val value: String) {
+    SERVER("server-path"),
+    PORT("server-port"),
+    DIR("webapps-dir"),
+    APP("app-name")
+}
+
+fun Properties.read(conf: Config): String {
+    return getProperty(conf.value)
 }
