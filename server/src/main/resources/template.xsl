@@ -129,16 +129,35 @@
         </div>
     </xsl:template>
 
-    <xsl:template match="tei:head">
+    <xsl:template match="p:head">
         <h1>
             <xsl:apply-templates select="@* |node()"/>
         </h1>
     </xsl:template>
 
-    <xsl:template match="tei:p">
-        <div class="p">
+    <xsl:template>
+        <h1>
             <xsl:apply-templates select="@* |node()"/>
-        </div>
+        </h1>
+    </xsl:template>
+
+    <xsl:template match="s:p">
+    <div class="p">
+        <xsl:apply-templates select="@* |node()"/>
+    </div>
+    <br/>
+    </xsl:template>
+
+    <xsl:template match="s:l">
+    <div class="speech">
+        <xsl:apply-templates select="@* |node()"/>
+    </div>
+    </xsl:template>
+
+    <xsl:template match="s:quote">
+    <i>
+        <xsl:apply-templates select="@* |node()"/>
+    </i>
     </xsl:template>
 
     <!-- Oh Tannenbaum (Lied) -->
@@ -167,6 +186,37 @@
         <br/>
     </xsl:template>
 
+    <!-- Hänsel und Gretel -->
+    <xsl:template match="s:div3[@type = 'h4']">
+        <h1>
+            <xsl:apply-templates select="@* |node()"/>
+        </h1>
+    </xsl:template>
+
+    <xsl:template match="s:div3[@type = 'p']">
+        <div class="p">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="s:div3[@type = 'lg']">
+        <div class="speech">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
+        <br/>
+    </xsl:template>
+
+    <xsl:template match="s:div3[@type = 'l']">
+        <div class="speech">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="s:note">
+        <div class="note">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
+    </xsl:template>
 
 
     <!-- Kopiert alle übrigen div-Elemente und behält Typ -->
@@ -185,5 +235,18 @@
     <xsl:template match="s:urn"/>
     <xsl:template match="s:license"/>
     <xsl:template match="s:source"/>
+
+    <xsl:template match="s:GetPassage">
+        <xsl:apply-templates select="@* |node()"/>
+    </xsl:template>
+    <xsl:template match="s:passage">
+        <xsl:apply-templates select="@* |node()"/>
+    </xsl:template>
+    <xsl:template match="s:request">
+        <xsl:apply-templates select="@* |node()"/>
+    </xsl:template>
+    <xsl:template match="s:reply">
+        <xsl:apply-templates select="@* |node()"/>
+    </xsl:template>
 
 </xsl:stylesheet>

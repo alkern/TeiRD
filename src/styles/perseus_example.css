@@ -1,0 +1,15 @@
+div.p {
+	font-family: "Times New Roman", Times, serif;
+}
+
+div.note {
+	font-size: 12px;
+}
+
+div.speech {
+	font-variant: small-caps;
+}
+
+div.chapter {
+	border-top: solid;
+}

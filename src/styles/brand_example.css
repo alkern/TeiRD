@@ -1,0 +1,17 @@
+div.text {
+    border: grey 1px solid;
+    margin: 5px;
+}
+
+b {
+    color: gray;
+    font-family: sans-serif;
+}
+
+div.sp {
+    font-family: serif;
+}
+
+div.Dramatis_Personae {
+    font-style: italic;
+}
