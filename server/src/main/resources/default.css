@@ -1,0 +1,23 @@
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
+}
+
+div.sp {
+    margin: 15px;
+}
+
+div.trailer {
+	font-style: italic;
+}
+
+div.quote {
+	font-variant: small-caps;
+}
+
+div.note {
+	font-style: italic;
+}
+
+div.p {
+	padding-bottom: 10px;
+}

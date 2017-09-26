@@ -25,6 +25,8 @@ import javax.xml.transform.dom.DOMResult
 import javax.xml.transform.stream.StreamResult
 import javax.xml.transform.stream.StreamSource
 
+val FOLDER = "WEB-INF/classes"
+
 @RestController
 class RenderController {
 
@@ -54,7 +56,7 @@ class RenderController {
         val builder = StringBuilder()
         builder.append("<title>CTS-Renderer Styles</title>")
         builder.append("Verfügbare Styles:<br/>")
-        val folder = File("${props.read(Config.DIR)}/${props.read(Config.APP)}")
+        val folder = File("${props.read(Config.DIR)}/${props.read(Config.APP)}/$FOLDER")
         folder.listFiles()
                 .map { it.name }
                 .filter { it.endsWith(".css") }
@@ -71,12 +73,12 @@ class FileLoader(private val props: Properties) {
     }
 
     fun loadTransformationStylesheet(): StreamSource {
-        val path = "${props.read(Config.DIR)}/${props.read(Config.APP)}/WEB-INF/classes/template.xsl"
+        val path = "${props.read(Config.DIR)}/${props.read(Config.APP)}/$FOLDER/template.xsl"
         return StreamSource(File(path))
     }
 
     fun loadStylesheet(style: String): String {
-        return "../../$style.css"
+        return "../$style.css"
     }
 }
 
