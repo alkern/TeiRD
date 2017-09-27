@@ -29,132 +29,166 @@
     </xsl:template>
 
     <!-- Personenverzeichnis -->
-    <xsl:template match="s:div4[@type = 'castGroup']">
+    <xsl:template match="*[@type = 'castGroup']">
         <ul>
             <xsl:apply-templates select="@* |node()"/>
         </ul>
     </xsl:template>
 
-    <xsl:template match="s:div5[@type = 'castItem']">
+    <xsl:template match="*[@type = 'castItem']">
         <li>
             <xsl:apply-templates select="@* |node()"/>
         </li>
     </xsl:template>
 
-    <!-- todo auch list und item als @type von div betrachten -->
-    <xsl:template match="s:list">
-        <ul>
-            <xsl:apply-templates select="@* |node()"/>
-        </ul>
-    </xsl:template>
-
-    <xsl:template match="s:item">
-        <li>
-            <xsl:apply-templates select="@* |node()"/>
-        </li>
-    </xsl:template>
-
-    <xsl:template match="tei:hi[@rend = 'bold']">
+    <!-- Verschiedene Werte für tei:hi -->
+    <xsl:template match="*[name() = 'hi' and @rend = 'bold']">
         <b>
             <xsl:apply-templates select="@* |node()"/>
         </b>
     </xsl:template>
 
-    <xsl:template match="tei:hi[@rend = 'italic']">
+    <xsl:template match="*[name() = 'hi' and @rend = 'italic']">
         <i>
             <xsl:apply-templates select="@* |node()"/>
         </i>
     </xsl:template>
 
-    <xsl:template match="tei:hi[@rend = 'ital']">
+    <xsl:template match="*[name() = 'hi' and @rend = 'ital']">
         <i>
             <xsl:apply-templates select="@* |node()"/>
         </i>
     </xsl:template>
 
-    <xsl:template match="tei:hi[@rend = 'spaced']">
+    <xsl:template match="*[name() = 'hi' and @rend = 'spaced']">
         <xsl:text> </xsl:text>
         <xsl:apply-templates select="@* |node()"/>
         <xsl:text> </xsl:text>
     </xsl:template>
 
-    <xsl:template match="s:head">
+    <xsl:template match="*[name() = 'hi']" priority="0">
+        <div class="hi">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
+    </xsl:template>
+
+    <!-- Falls TEI-Elemente nicht in nummerierte divs gewrappt sind, hier in HTML-Divs einpacken -->
+    <xsl:template match="*[name() = 'list' or @type='list']">
+        <ul>
+            <xsl:apply-templates select="@* |node()"/>
+        </ul>
+    </xsl:template>
+
+    <xsl:template match="*[name() = 'item' or @type='item']">
+        <li>
+            <xsl:apply-templates select="@* |node()"/>
+        </li>
+    </xsl:template>
+
+    <xsl:template match="*[name() = 'head']">
         <h1>
             <xsl:apply-templates select="@* |node()"/>
         </h1>
     </xsl:template>
 
-    <xsl:template match="s:p">
+    <xsl:template match="*[name() = 'p']">
         <div class="p">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
-    <xsl:template match="s:l">
+    <xsl:template match="*[name() = 'l']">
         <div class="l">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
-    <xsl:template match="s:lg">
+    <xsl:template match="*[name() = 'lg']">
         <div class="lg">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
-    <xsl:template match="s:sp">
+    <xsl:template match="*[name() = 'sp']">
         <div class="sp">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
-    <xsl:template match="s:speaker">
+    <xsl:template match="*[name() = 'speaker']">
         <div class="speaker">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
-    <xsl:template match="s:stage">
+    <xsl:template match="*[name() = 'stage']">
         <div class="stage">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
-    <xsl:template match="s:quote">
+    <xsl:template match="*[name() = 'quote']">
         <div class="quote">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
-    <xsl:template match="s:q">
+    <xsl:template match="*[name() = 'q']">
         <div class="quote">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
-    <xsl:template match="s:note">
+    <xsl:template match="*[name() = 'note']">
         <div class="note">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
-    <xsl:template match="s:trailer">
+    <xsl:template match="*[name() = 'trailer']">
         <div class="trailer">
             <xsl:apply-templates select="@* |node()"/>
         </div>
     </xsl:template>
 
+    <xsl:template match="*[name() = 'seg']">
+        <div class="seg">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
+    </xsl:template>
+
+
     <!-- Regex mit matches funktioniert mit dem Java-XSLT nicht... -->
-    <xsl:template match="*[@type = 'h1' or name() = 'h1' or
-						   @type = 'h2' or name() = 'h2' or
-						   @type = 'h3' or name() = 'h3' or
-						   @type = 'h4' or name() = 'h4' or
-						   @type = 'h5' or name() = 'h5']">
+    <xsl:template match="*[@type = 'h1' or name() = 'h1']">
         <h1>
             <xsl:apply-templates select="@* |node()"/>
         </h1>
     </xsl:template>
-
+    <xsl:template match="*[@type = 'h2' or name() = 'h2']">
+        <h2>
+            <xsl:apply-templates select="@* |node()"/>
+        </h2>
+    </xsl:template>
+    <xsl:template match="*[@type = 'h3' or name() = 'h3']">
+        <h3>
+            <xsl:apply-templates select="@* |node()"/>
+        </h3>
+    </xsl:template>
+    <xsl:template match="*[@type = 'h4' or name() = 'h4']">
+        <h4>
+            <xsl:apply-templates select="@* |node()"/>
+        </h4>
+    </xsl:template>
+    <xsl:template match="*[@type = 'h5' or name() = 'h5']">
+        <h5>
+            <xsl:apply-templates select="@* |node()"/>
+        </h5>
+    </xsl:template>
+    <xsl:template match="*[@type = 'h6' or name() = 'h6']">
+        <h6>
+            <xsl:apply-templates select="@* |node()"/>
+        </h6>
+    </xsl:template>
 
     <!-- Kopiert alle übrigen div-Elemente und behält Typ -->
     <xsl:template match="*[starts-with(name(), 'div')]" priority="0">

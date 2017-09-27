@@ -1,9 +1,13 @@
 h1, h2, h3, h4, h5, h6 {
-    text-align: center;
+    text-align: center; /* Überschriften in der Mitte */
 }
 
 div.sp {
-    margin: 15px;
+    margin: 15px; /* Sprachblöcke in Dramen mit Abstand in allen Richtungen */
+}
+
+div.speaker {
+	font-weight: bold;
 }
 
 div.trailer {
@@ -11,13 +15,24 @@ div.trailer {
 }
 
 div.quote {
-	font-variant: small-caps;
+	font-variant: small-caps; /* Zitate mit Großbuchstaben hervorheben */
+	display: inline; /* Zitate im Fließtext, nicht in neuer Zeile */
 }
 
 div.note {
 	font-style: italic;
+	display: inline; /* Kein Zeilenumbruch nach note, da sie öfters im Text vorkommen z.B. als Jahreszahlen */
+	padding-left: 5px;
 }
 
 div.p {
-	padding-bottom: 10px;
+	padding-bottom: 10px; /* Paragraphen/Absätze mit Abständen in alle Richtungen */
+}
+
+div.lg {
+	padding-bottom: 10px; /* Einzelne Line Groups zB Stropen mit etwas Abstand voneinander trennen */
+}
+
+div.head {
+	font-weight: bold;
 }
