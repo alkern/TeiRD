@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -29,16 +29,29 @@
     </xsl:template>
 
     <!-- Personenverzeichnis -->
-    <xsl:template match="*[@type = 'castGroup']">
+    <xsl:template match="*[@type = 'castGroup' or name() = 'castGroup'
+				or @type = 'castList' or name() = 'castList']">
         <ul>
             <xsl:apply-templates select="@* |node()"/>
         </ul>
     </xsl:template>
 
-    <xsl:template match="*[@type = 'castItem']">
+    <xsl:template match="*[@type = 'castItem' or name() = 'castItem']">
         <li>
             <xsl:apply-templates select="@* |node()"/>
         </li>
+    </xsl:template>
+
+    <xsl:template match="*[@type = 'role' or name() = 'role']">
+        <div class="role">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="*[@type = 'roleDesc' or name() = 'roleDesc']">
+        <div class="roleDesc">
+            <xsl:apply-templates select="@* |node()"/>
+        </div>
     </xsl:template>
 
     <!-- Verschiedene Werte für tei:hi -->

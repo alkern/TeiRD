@@ -56,7 +56,7 @@ class RenderController {
         val builder = StringBuilder()
         builder.append("<title>CTS-Renderer Styles</title>")
         builder.append("Verfügbare Styles:<br/>")
-        val folder = File("${props.read(Config.DIR)}/${props.read(Config.APP)}/$FOLDER")
+        val folder = File("${props.read(Config.DIR)}/${props.read(Config.APP)}")
         folder.listFiles()
                 .map { it.name }
                 .filter { it.endsWith(".css") }

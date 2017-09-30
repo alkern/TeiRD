@@ -10,6 +10,10 @@ div.speaker {
 	font-weight: bold;
 }
 
+div.stage {
+    font-style: italic;
+}
+
 div.trailer {
 	font-style: italic;
 }
