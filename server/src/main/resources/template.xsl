@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
@@ -170,6 +170,23 @@
         </div>
     </xsl:template>
 
+    <xsl:template match="*[@type = 'lb' or name() = 'lb']">
+        <xsl:apply-templates select="@* |node()"/>
+        <br/>
+    </xsl:template>
+
+    <xsl:template match="*[@type = 'fw' or name() = 'fw']">
+		<div class="fw">
+			<xsl:apply-templates select="@* |node()"/>
+        </div>
+    </xsl:template>
+
+    <xsl:template match="*[@type = 'pb' or name() = 'pb']">
+		<div class="pb">
+			<xsl:apply-templates select="@* |node()"/>
+        </div>
+    </xsl:template>
+
 
     <!-- Regex mit matches funktioniert mit dem Java-XSLT nicht... -->
     <xsl:template match="*[@type = 'h1' or name() = 'h1']">
@@ -213,23 +230,23 @@
 
 
     <!-- ignorierte Tags -->
-    <xsl:template match="tei:title"/>
-    <xsl:template match="s:requestName"/>
-    <xsl:template match="s:requestUrn"/>
-    <xsl:template match="s:urn"/>
-    <xsl:template match="s:license"/>
-    <xsl:template match="s:source"/>
+    <xsl:template match="*[name() = 'title']"/>
+    <xsl:template match="*[name() = 'requestName']"/>
+    <xsl:template match="*[name() = 'requestUrn']"/>
+    <xsl:template match="*[name() = 'urn']"/>
+    <xsl:template match="*[name() = 'license']"/>
+    <xsl:template match="*[name() = 'source']"/>
 
-    <xsl:template match="s:GetPassage">
+    <xsl:template match="*[name() = 'GetPassage']">
         <xsl:apply-templates select="@* |node()"/>
     </xsl:template>
-    <xsl:template match="s:passage">
+    <xsl:template match="*[name() = 'passage']">
         <xsl:apply-templates select="@* |node()"/>
     </xsl:template>
-    <xsl:template match="s:request">
+    <xsl:template match="*[name() = 'request']">
         <xsl:apply-templates select="@* |node()"/>
     </xsl:template>
-    <xsl:template match="s:reply">
+    <xsl:template match="*[name() = 'reply']">
         <xsl:apply-templates select="@* |node()"/>
     </xsl:template>
 

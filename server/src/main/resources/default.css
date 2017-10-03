@@ -40,3 +40,8 @@ div.lg {
 div.head {
 	font-weight: bold;
 }
+
+div.hi {
+  display: inline;
+  font-weight: bold;
+}
