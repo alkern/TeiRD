@@ -100,7 +100,7 @@ class HTTPClient(private val props: Properties) {
 
     private fun generateURI(server: String, urn: String): String {
         return "http://${props.read(Config.SERVER)}:${props.read(Config.PORT)}/$server/cts/" +
-                "?request=GetPassage&urn=$urn&configuration=divs=true_escapepassage=false"
+                "?request=GetPassage&urn=$urn&configuration=divs=true"
     }
 }
 
